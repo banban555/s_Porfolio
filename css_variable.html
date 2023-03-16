@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css_Variable</title>
+    <style>
+        :root
+        {
+            --background-color : thistle;
+            --color : whitesmoke;
+            --base-space : 8px;
+        }
+        .first
+        {
+            background-color:var(--background-color);
+            margin-left : calc(var(--base-space)*2);
+            color : var(--color);
+        }
+        .second
+        {
+            background-color:var(--background-color);
+            margin-left : calc(var(--base-space)*2);
+            color : var(--color);
+        }
+        @media screen and (max-width : 768px)
+        {
+            :root
+            {
+                --background-color : salmon;
+                --color : blue;
+                --base-space : 8px;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <ul class="first">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <ul class="second">
+        <li>Korea</li>
+        <li>Japan</li>
+        <li>China</li>
+    </ul>
+</body>
+</html>
